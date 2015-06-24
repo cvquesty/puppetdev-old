@@ -3,20 +3,12 @@
 class puppetdev::config {
 
   # Create User's .vim infrastructure and get pathogen
+  # and create the autoload directory
   vcsrepo {'/home/vagrant/.vim/':
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/tpope/vim-pathogen',
     require  => Package['vim-enhanced'],
-  }
-
-  # Add autoload subdirectory
-  file {'/home/vagrant/.vim/autoload':
-    ensure  => 'directory',
-    owner   => 'vagrant',
-    group   => 'vagrant',
-    mode    => '0755',
-    require => Vcsrepo['/home/vagrant/.vim'],
   }
 
   # Add bundle subdirectory
