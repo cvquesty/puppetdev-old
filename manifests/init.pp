@@ -36,8 +36,8 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class puppetdev (
-  $user = 'vagrant',
-  $group = 'vagrant',
+  $user  = $puppetdev::params::user,
+  $group = $puppetdev::params::group,
 ){
   include puppetdev::config
   include puppetdev::vim

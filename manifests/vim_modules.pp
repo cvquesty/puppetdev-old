@@ -5,7 +5,7 @@ class puppetdev::vim_modules (
     $group = $puppetdev::params::group,
 ){
   # Install Powerline
-  vcsrepo {"/home/$user/.vim/bundle/powerline":
+  vcsrepo {"/home/${user}/.vim/bundle/powerline":
     ensure   => 'present',
     provider => 'git',
     source   => 'git://github.com/powerline/powerline.git',
@@ -13,7 +13,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Syntastic
-  vcsrepo {"/home/$user/.vim/bundle/syntastic":
+  vcsrepo {"/home/${user}/.vim/bundle/syntastic":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/scrooloose/syntastic.git',
@@ -21,7 +21,7 @@ class puppetdev::vim_modules (
   }
 
   # Install  Tabular
-  vcsrepo {"/home/$user/.vim/bundle/tabular":
+  vcsrepo {"/home/${user}/.vim/bundle/tabular":
     ensure   => 'present',
     provider => 'git',
     source   => 'git://github.com/godlygeek/tabular.git',
@@ -29,7 +29,7 @@ class puppetdev::vim_modules (
   }
 
   # Install airline
-  vcsrepo {"/home/$user/.vim/bundle/vim-airline":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-airline":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/bling/vim-airline.git',
@@ -37,7 +37,7 @@ class puppetdev::vim_modules (
   }
 
   # Install fugitive
-  vcsrepo {"/home/$user/.vim/bundle/vim-fugitive":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-fugitive":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/tpope/vim-fugitive.git',
@@ -45,7 +45,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Git Gutter
-  vcsrepo {"/home/$user/.vim/bundle/vim-gitgutter":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-gitgutter":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/airblade/vim-gitgutter.git',
@@ -53,7 +53,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Indent Guides
-  vcsrepo {"/home/$user/.vim/bundle/vim-indent-guides":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-indent-guides":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/nathanaelkane/vim-indent-guides.git',
@@ -61,7 +61,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Vim Puppet
-  vcsrepo {"/home/$user/.vim/bundle/vim-puppet":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-puppet":
     ensure   => 'present',
     provider => 'git',
     source   => 'git://github.com/rodjek/vim-puppet.git',
@@ -69,7 +69,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Vim Trailing Whitespace
-  vcsrepo {"/home/$user/.vim/bundle/vim-trailing-whitespace":
+  vcsrepo {"/home/${user}/.vim/bundle/vim-trailing-whitespace":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/bronson/vim-trailing-whitespace.git',
@@ -77,7 +77,7 @@ class puppetdev::vim_modules (
   }
 
   # Install Rainbow Parenthesis
-  vcsrepo {"/home/$user/.vim/bundle/rainbow_parenthesis.vim":
+  vcsrepo {"/home/${user}/.vim/bundle/rainbow_parenthesis.vim":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/kien/rainbow_parentheses.vim',

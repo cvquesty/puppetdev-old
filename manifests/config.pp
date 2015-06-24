@@ -7,16 +7,16 @@ class puppetdev::config (
 
   # Create User's .vim infrastructure and get pathogen
   # and create the autoload directory
-  vcsrepo {"/home/$user/.vim/":
+  vcsrepo {"/home/${user}/.vim/":
     ensure   => 'present',
     provider => 'git',
     source   => 'https://github.com/tpope/vim-pathogen',
     require  => Package['vim-enhanced'],
-    before   => File["/home/$user/.vim/bundle"],
+    before   => File["/home/${user}/.vim/bundle"],
   }
 
   # Add bundle subdirectory
-  file {"/home/$user/.vim/bundle":
+  file {"/home/${user}/.vim/bundle":
     ensure => 'directory',
     owner  => $user,
     group  => $group,
@@ -26,13 +26,13 @@ class puppetdev::config (
   # Set Permissions for vim modules
   exec {'ownit':
     path    => '/usr/bin',
-    command => "/usr/bin/chown -R $user /home/$user/.vim",
+    command => "/usr/bin/chown -R ${user} /home/${user}/.vim",
     require => Class['puppetdev::vim_modules'],
   }
 
   exec {'groupit':
     path    => '/usr/bin',
-    command => "/usr/bin/chgrp -R $group /home/$user/.vim",
+    command => "/usr/bin/chgrp -R ${group} /home/${user}/.vim",
     require => Class['puppetdev::vim_modules'],
   }
 }
