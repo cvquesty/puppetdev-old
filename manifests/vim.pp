@@ -4,6 +4,5 @@ class puppetdev::vim {
   # Install vim-enhanced
   package {'vim-enhanced':
     ensure  => 'present',
-    require => Package['vim-minimal'],
   }
 }
