@@ -1,8 +1,8 @@
 # Main PuppetDev Manifest to place the .vimrc file
 #
 class puppetdev::vimrc (
-	$user  = "$::puppetdev::params::user",
-	$group = "$::puppetdev::params::group",
+	$user  = $::puppetdev::params::user,
+	$group = $::puppetdev::params::group,
 ){
 	# Place the .vimrc
 	file { "/home/${user}/.vimrc":
@@ -14,9 +14,9 @@ class puppetdev::vimrc (
 	}
 
 	# Make a place for the engineer to manage his own .vimrc settings
-	exec { 'vimrc.custom':
+	exec { 'vimrc_custom':
 		path    => '/usr/bin',
 		command => "/usr/bin/touch /home/${user}/.vimrc.custom",
-		unless  => '/usr/bin/test -f /home/${user}/.vimrc.custom',
+		unless  => "/usr/bin/test -f /home/${user}/.vimrc.custom",
 	}
 }
