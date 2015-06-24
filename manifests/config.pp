@@ -13,11 +13,11 @@ class puppetdev::config {
 
   # Add bundle subdirectory
   file {'/home/vagrant/.vim/bundle':
-    ensure  => 'directory',
-    owner   => 'vagrant',
-    group   => 'vagrant',
-    mode    => '0755',
-    onlyif  => 'test -f /home/vagrant/.vim',
+    ensure => 'directory',
+    owner  => 'vagrant',
+    group  => 'vagrant',
+    mode   => '0755',
+    onlyif => 'test -d /home/vagrant/.vim',
   }
 
   # Set Permissions for vim modules
