@@ -9,6 +9,7 @@ class puppetdev::config {
     provider => 'git',
     source   => 'https://github.com/tpope/vim-pathogen',
     require  => Package['vim-enhanced'],
+    before   => File['/home/vagrant/.vim/bundle',
   }
 
   # Add bundle subdirectory
@@ -17,7 +18,6 @@ class puppetdev::config {
     owner  => 'vagrant',
     group  => 'vagrant',
     mode   => '0755',
-    onlyif => 'test -d /home/vagrant/.vim',
   }
 
   # Set Permissions for vim modules
