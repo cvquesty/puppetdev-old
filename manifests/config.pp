@@ -17,7 +17,7 @@ class puppetdev::config {
     owner   => 'vagrant',
     group   => 'vagrant',
     mode    => '0755',
-    require => Vcsrepo['/home/vagrant/.vim'],
+    onlyif  => 'test -f /home/vagrant/.vim',
   }
 
   # Set Permissions for vim modules
