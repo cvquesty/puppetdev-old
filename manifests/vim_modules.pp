@@ -1,8 +1,8 @@
 # Primary Vim module installations
 #
 class puppetdev::vim_modules (
-  $user  = $::puppetdev::params::user,
-  $group = $::puppetdev::params::group,
+  $user  = "$::puppetdev::params::user",
+  $group = "$::puppetdev::params::group",
 ){
   # Install Powerline
   vcsrepo {"/home/${user}/.vim/bundle/powerline":
