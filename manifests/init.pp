@@ -38,7 +38,7 @@
 class puppetdev (
   $user  = $puppetdev::params::user,
   $group = $puppetdev::params::group,
-){
+) inherits puppetdev::params {
   include puppetdev::config
   include puppetdev::vim
   include puppetdev::vim_modules
