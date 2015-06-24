@@ -18,6 +18,16 @@ class puppetdev::config {
     require => File['/home/vagrant/.vim'],
   }
 
+  # Add pathogen to autoload
+  file {'/home/vagrant/.vim/autoload/pathogen.vim':
+    ensure  => 'present',
+    owner   => 'vagrant',
+    group   => 'vagrant',
+    mode    => '0755',
+    source  => 'puppet:///modules/puppetdev/pathogen.vim',
+    require => File['/home/vagrant/.vim/autoload',
+  }
+
   # Add bundle subdirectory
   file {'/home/vagrant/.vim/bundle':
     ensure  => 'directory',
