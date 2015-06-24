@@ -35,7 +35,10 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class puppetdev {
+class puppetdev (
+  $user  = "$::puppetdev::params::user",
+  $group = "$::puppetdev::params::group",
+){
   include puppetdev::config
   include puppetdev::vim
   include puppetdev::vim_modules
