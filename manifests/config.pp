@@ -22,6 +22,7 @@ class puppetdev::config {
   exec {'getpathogen':
     path    => '/usr/bin',
     command => 'curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim',
+    returns => ['0','23'],
     require => File['/home/vagrant/.vim/autoload'],
   }
 
