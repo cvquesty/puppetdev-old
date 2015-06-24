@@ -9,7 +9,7 @@ class puppetdev::config {
     provider => 'git',
     source   => 'https://github.com/tpope/vim-pathogen',
     require  => Package['vim-enhanced'],
-    before   => File['/home/vagrant/.vim/bundle',
+    before   => File['/home/vagrant/.vim/bundle'],
   }
 
   # Add bundle subdirectory
