@@ -65,7 +65,7 @@ class puppetdev::vim_modules (
     ensure   => 'present',
     provider => 'git',
     source   => 'git://github.com/rodjek/vim-puppet.git',
-    require  => Package['vim-hanced'],
+    require  => Package['vim-enhanced'],
   }
 
   # Install Vim Trailing Whitespace
