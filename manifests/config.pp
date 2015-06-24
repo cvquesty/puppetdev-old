@@ -1,12 +1,13 @@
 # Main configuration manifest for vim setup
 #
 class puppetdev::config {
-  # Create User's .vim infrastructure
-  file {'/home/vagrant/.vim':
-    ensure => 'directory',
-    owner  => 'vagrant',
-    group  => 'vagrant',
-    mode   => '0755',
+
+  # Create User's .vim infrastructure and get pathogen
+  vcsrepo {'/home/vagrant/.vim/':
+    ensure   => 'present',
+    provider => 'git',
+    source   => 'https://github.com/tpope/vim-pathogen',
+    require  => Package['vim-enhanced'],
   }
 
   # Add autoload subdirectory
@@ -15,15 +16,7 @@ class puppetdev::config {
     owner   => 'vagrant',
     group   => 'vagrant',
     mode    => '0755',
-    require => File['/home/vagrant/.vim'],
-  }
-
-  # Add pathogen to autoload
-  exec {'getpathogen':
-    path    => '/usr/bin',
-    command => 'curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim',
-    returns => ['0','23'],
-    require => File['/home/vagrant/.vim/autoload'],
+    require => Vcsrepo['/home/vagrant/.vim'],
   }
 
   # Add bundle subdirectory
@@ -32,7 +25,7 @@ class puppetdev::config {
     owner   => 'vagrant',
     group   => 'vagrant',
     mode    => '0755',
-    require => File['/home/vagrant/.vim'],
+    require => Vcsrepo['/home/vagrant/.vim'],
   }
 
   # Set Permissions for vim modules
