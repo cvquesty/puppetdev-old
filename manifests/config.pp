@@ -19,12 +19,9 @@ class puppetdev::config {
   }
 
   # Add pathogen to autoload
-  file {'/home/vagrant/.vim/autoload/pathogen.vim':
-    ensure  => 'present',
-    owner   => 'vagrant',
-    group   => 'vagrant',
-    mode    => '0755',
-    source  => 'puppet:///modules/puppetdev/pathogen.vim',
+  exec {'getpathogen':
+    path    => '/usr/bin',
+    command => 'curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim',
     require => File['/home/vagrant/.vim/autoload'],
   }
 
@@ -40,13 +37,13 @@ class puppetdev::config {
   # Set Permissions for vim modules
   exec {'ownit':
     path    => '/usr/bin',
-    command => '/usr/bin/chown -R vagrant /home/vagrant/.vim/bundle',
+    command => '/usr/bin/chown -R vagrant /home/vagrant/.vim',
     require => Class['puppetdev::vim_modules'],
   }
 
   exec {'groupit':
     path    => '/usr/bin',
-    command => '/usr/bin/chgrp -R vagrant /home/vagrant/.vim/bundle',
+    command => '/usr/bin/chgrp -R vagrant /home/vagrant/.vim',
     require => Class['puppetdev::vim_modules'],
   }
 }
