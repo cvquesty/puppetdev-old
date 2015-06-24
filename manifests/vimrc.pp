@@ -2,10 +2,10 @@
 #
 class puppetdev::vimrc {
 	# Place the .vimrc
-	file { "/home/${::puppetdev::params::user}/.vimrc":
+	file { '/home/vagrant/.vimrc':
 		ensure => 'present',
-		owner  => "${::puppetdev::params::user}",
-		group  => "${::puppetdev::params::group}",
+		owner  => 'vagrant',
+		group  => 'vagrant',
 		mode   => '0644',
 		source => 'puppet:///modules/puppetdev/vimrc',
 	}
