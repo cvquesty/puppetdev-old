@@ -25,7 +25,7 @@ class puppetdev::config {
     group   => 'vagrant',
     mode    => '0755',
     source  => 'puppet:///modules/puppetdev/pathogen.vim',
-    require => File['/home/vagrant/.vim/autoload',
+    require => File['/home/vagrant/.vim/autoload'],
   }
 
   # Add bundle subdirectory
