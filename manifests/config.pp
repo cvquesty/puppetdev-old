@@ -1,8 +1,8 @@
 # Main configuration manifest for vim setup
 #
 class puppetdev::config (
-  $user  = $::puppetdev::params::user,
-  $group = $::puppetdev::params::group,
+  $user  = "$::puppetdev::params::user",
+  $group = "$::puppetdev::params::group",
 ){
     # Create User's .vim infrastructure
     file {"/home/${user}/.vim":
