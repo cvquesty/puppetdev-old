@@ -1,11 +1,11 @@
 # Main PuppetDev Manifest to place the .vimrc file
 #
 class puppetdev::vimrc (
-  $user  = $::puppetdev::params::user,
-  $group = $::puppetdev::params::group,
+	$user  = $::puppetdev::params::user,
+	$group = $::puppetdev::params::group,
 ){
 	# Place the .vimrc
-	file {'/home/${user}/.vimrc':
+	file {"/home/${user}/.vimrc":
 		ensure => 'present',
 		owner  => $user,
 		group  => $group,
