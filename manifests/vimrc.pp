@@ -1,8 +1,8 @@
 # Main PuppetDev Manifest to place the .vimrc file
 #
 class puppetdev::vimrc (
-	$user  = hiera('pduser'),
-	$group = hiera('pdgroup'),
+	$user  = $puppetdev::params::user,
+	$group = $puppetdev::params::group,
 ){
 	# Place the .vimrc
 	file { "/home/$user/.vimrc":
