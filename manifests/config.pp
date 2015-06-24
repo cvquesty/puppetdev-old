@@ -1,32 +1,29 @@
 # Main configuration manifest for vim setup
 #
-class puppetdev::config (
-  $user  = puppetdev::params::user,
-  $group = puppetdev::params::group,
-){
+class puppetdev::config {
     # Create User's .vim infrastructure
-    file {"/home/${user}/.vim":
+    file {"/home/${::puppetdev::params::user}/.vim":
       ensure => 'directory',
-      owner  => $user,
-      group  => $group,
+      owner  => "${::puppetdev::params::user}",
+      group  => "${::puppetdev::params::group}",
       mode   => '0755',
     }
 
     # Add autoload subdirectory
-    file {"/home/${user}/.vim/autoload":
+    file {"/home/${::puppetdev::params::user}/.vim/autoload":
       ensure  => 'directory',
-      owner   => $user,
-      group   => $group,
+      owner   => "${::puppetdev::params::user}",
+      group   => "${::puppetdev::params::group}",
       mode    => '0755',
-      require => File["/home/${user}/.vim"],
+      require => File["/home/${::puppetdev::params::user}/.vim"],
     }
 
     # Add bundle subdirectory
-    file {"/home/${user}/.vim/bundle":
+    file {"/home/${::puppetdev::params::user}/.vim/bundle":
       ensure  => 'directory',
-      owner   => $user,
-      group   => $group,
+      owner   => "${::puppetdev::params::user}",
+      group   => "${::puppetdev::params::group}",
       mode    => '0755',
-      require => File["/home/${user}/.vim"],
+      require => File["/home/${::puppetdev::params::user}/.vim"],
     }
 }
