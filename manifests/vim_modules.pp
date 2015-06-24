@@ -72,4 +72,12 @@ class puppetdev::vim_modules {
     source   => 'https://github.com/bronson/vim-trailing-whitespace.git',
     require  => Package['vim-enhanced'],
   }
+
+  # Install Rainbow Parenthesis
+  vcsrepo {'/home/vagrant/.vim/bundle/rainbow_parenthesis.vim':
+    ensure   => 'present',
+    provider => 'git',
+    source   => 'https://github.com/kien/rainbow_parentheses.vim',
+    require  => Package['vim-enhanced'],
+  }
 }
