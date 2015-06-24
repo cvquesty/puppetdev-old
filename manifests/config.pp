@@ -1,8 +1,8 @@
 # Main configuration manifest for vim setup
 #
 class puppetdev::config (
-  $user  = $::puppetdev::params::user,
-  $group = $::puppetdev::params::group,
+  $user  = hiera('pduser'),
+  $group = hiera('pdgroup'),
 ){
 
   # Create User's .vim infrastructure and get pathogen
