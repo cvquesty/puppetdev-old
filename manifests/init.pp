@@ -36,7 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class puppetdev (
-    $pdusers_hash = hiera_array('pdusers'),
+    $pdusers_hash = hiera('pdusers'),
     $pdusers = $pdusers_hash[$name],
     $user  = $pdusers['pduser'],
     $group = $pdusers['pdgroup'],
