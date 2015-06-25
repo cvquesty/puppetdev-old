@@ -36,8 +36,9 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class puppetdev (
-  $user  = $puppetdev::params::user,
-  $group = $puppetdev::params::group,
+    $pdusers = hiera('pdusers'),
+    $user  = $pdusers[0]['pduser'],
+    $group = $pdusers[1]['pdgroup'],
 ) inherits puppetdev::params {
   include puppetdev::config
   include puppetdev::vim
