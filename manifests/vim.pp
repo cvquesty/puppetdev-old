@@ -1,5 +1,5 @@
 # Main vim manifest for PuppetDev module
-#
+# foo
 class puppetdev::vim {
   # Make sure the git provider is available
   package {'git':
