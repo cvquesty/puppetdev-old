@@ -68,4 +68,4 @@ let g:syntastic_auto_jump = 1
 let g:syntastic_enable_perl_checker = 1
 
 " Include Engineer customizations
-. ~/.vimrc.custom
+source ~/.vimrc.custom
