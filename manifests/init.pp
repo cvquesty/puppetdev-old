@@ -36,8 +36,8 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class puppetdev (
-  $user    = 'vagrant',
-  $group   = 'vagrant',
+  $user    = 'jsheets',
+  $group   = 'jsheets',
 ) inherits puppetdev::params {
   include puppetdev::config
   include puppetdev::vim
