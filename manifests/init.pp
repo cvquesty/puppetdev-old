@@ -36,7 +36,7 @@
 # Copyright 2015 Your name here, unless otherwise noted.
 #
 class puppetdev (
-    $pdusers = hiera('pdusers'),
+    $pdusers = hiera_array('pdusers'),
     $user  = $pdusers[0]['pduser'],
     $group = $pdusers[1]['pdgroup'],
 ) inherits puppetdev::params {
