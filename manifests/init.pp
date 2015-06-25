@@ -37,8 +37,8 @@
 #
 class puppetdev (
   $pdusers = hiera('pdusers'),
-  $user    = $pdusers[0]['pduser'],
-  $group   = $pdusers[1]['pdgroup'],
+  $user    = $pdusers['pduser'],
+  $group   = $user['pdgroup'],
 ) inherits puppetdev::params {
   include puppetdev::config
   include puppetdev::vim
