@@ -2,24 +2,24 @@
   "name": "cvquesty-puppetdev",
   "version": "0.1.0",
   "author": "cvquesty",
-  "summary": "Module to provide vim development environment for coders.",
   "license": "Apache-2.0",
+  "summary": "Module to provide vim development environment for coders.",
   "source": "https://github.com/cvquesty/puppetdev",
   "project_page": "https://github.com/cvquesty/puppetdev",
   "issues_url": "https://github.com/cvquesty/puppetdev/issues",
   "tags": ["Development", "Tools"],
-  "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-    {"name":"puppetlabs-vcsrepo","version_requirement":">= 1.0.0"}
-  ]
   "operatingsystem_support": [
     {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease":[ "6.x", "7.x" ]
+      "operatingsystem":"RedHat",
+      "operatingsystemrelease":[ "6", "7" ]
     },
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease":[ "6.x", "7.x" ]
+      "operatingsystemrelease":[ "6", "7" ]
     }
   ],
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"},
+    {"name":"puppetlabs-vcsrepo","version_requirement":">= 1.0.0"}
+  ]
 }
