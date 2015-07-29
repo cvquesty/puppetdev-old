@@ -7,9 +7,19 @@
   "source": "https://github.com/cvquesty/puppetdev",
   "project_page": "https://github.com/cvquesty/puppetdev",
   "issues_url": "https://github.com/cvquesty/puppetdev/issues",
+  "tags": ["Development", "Tools"],
   "dependencies": [
     {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
     {"name":"puppetlabs-vcsrepo","version_requirement":">= 1.0.0"}
   ]
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease":[ "6.x", "7.x" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease":[ "6.x", "7.x" ]
+    }
+  ],
 }
-
