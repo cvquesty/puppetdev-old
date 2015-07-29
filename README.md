@@ -39,7 +39,7 @@ Seeing as this is a standard Puppet module, follow the rules for classifying a n
 * Installs all used modules into Pathogen
 * Creates a custom .vimrc for the user
 
-### Setup Requirements **OPTIONAL**
+### Setup Requirements
 
 No special requirements observed at this time, except for the needed [stdlib](https://forge.puppetlabs.com/puppetlabs/stdlib) and [vcsrepo](https://forge.puppetlabs.com/puppetlabs/vcsrepo) modules as dependencies.
 
