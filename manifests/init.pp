@@ -43,4 +43,5 @@ class puppetdev (
   include puppetdev::vim
   include puppetdev::vim_modules
   include puppetdev::vimrc
+  include puppetdev::profile
 }
