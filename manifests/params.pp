@@ -3,4 +3,5 @@
 class puppetdev::params {
   $user  = 'vagrant'
   $group = 'vagrant'
+  $home = '/home'
 }

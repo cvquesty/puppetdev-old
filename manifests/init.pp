@@ -38,6 +38,7 @@
 class puppetdev (
   $user    = $::puppetdev::params::user,
   $group   = $::puppetdev::params::group,
+  $home    = $::puppetdev::params::home,
 ) inherits puppetdev::params {
   include puppetdev::config
   include puppetdev::vim
