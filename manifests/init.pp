@@ -40,6 +40,7 @@ class puppetdev (
   $group   = $::puppetdev::params::group,
   $home    = $::puppetdev::params::home,
 ) inherits puppetdev::params {
+  Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
   include puppetdev::config
   include puppetdev::vim
   include puppetdev::vim_modules

@@ -7,7 +7,7 @@ class puppetdev::vimrc (
 ){
 
 	# Place the .vimrc
-	file { "${home}/$user/.vimrc":
+	file { "${home}/${user}/.vimrc":
 		ensure => 'present',
 		owner  => $user,
 		group  => $group,
