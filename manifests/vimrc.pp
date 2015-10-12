@@ -3,10 +3,11 @@
 class puppetdev::vimrc (
 	$user  = $puppetdev::params::user,
 	$group = $puppetdev::params::group,
+	$home  = $puppetdev::params::home,
 ){
 
 	# Place the .vimrc
-	file { "/home/$user/.vimrc":
+	file { "${home}/${user}/.vimrc":
 		ensure => 'present',
 		owner  => $user,
 		group  => $group,
@@ -15,9 +16,11 @@ class puppetdev::vimrc (
 	}
 
 	# Make a place for the engineer to manage his own .vimrc settings
-	exec { 'vimrc_custom':
-		path    => '/usr/bin',
-		command => "/usr/bin/touch /home/${user}/.vimrc.custom",
-		unless  => "/usr/bin/test -f /home/${user}/.vimrc.custom",
-	}
+	file {"${home}/${user}/.vimrc.custom":
+    ensure => 'present',
+		owner  => $user,
+		group  => $group,
+		mode   => '0644',
+  }
+
 }
