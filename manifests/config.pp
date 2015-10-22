@@ -25,14 +25,14 @@ class puppetdev::config (
 
   # Set Permissions for vim modules
   exec {'ownit':
-    path    => '/usr/bin',
-    command => "/usr/bin/chown -R ${user} /home/${user}/.vim",
+    path    => '/bin',
+    command => "/bin/chown -R ${user} /home/${user}/.vim",
     require => Class['puppetdev::vim_modules'],
   }
 
   exec {'groupit':
-    path    => '/usr/bin',
-    command => "/usr/bin/chgrp -R ${group} /home/${user}/.vim",
+    path    => '/bin',
+    command => "/bin/chgrp -R ${group} /home/${user}/.vim",
     require => Class['puppetdev::vim_modules'],
   }
 }
