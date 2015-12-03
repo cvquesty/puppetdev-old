@@ -8,7 +8,7 @@ class puppetdev::vim_modules (
   vcsrepo {"/home/${user}/.vim/bundle/powerline":
     ensure   => 'present',
     provider => 'git',
-    source   => 'git://github.com/powerline/powerline.git',
+    source   => 'https://github.com/powerline/powerline.git',
     require  => Package['vim-enhanced'],
   }
 
@@ -24,7 +24,7 @@ class puppetdev::vim_modules (
   vcsrepo {"/home/${user}/.vim/bundle/tabular":
     ensure   => 'present',
     provider => 'git',
-    source   => 'git://github.com/godlygeek/tabular.git',
+    source   => 'https://github.com/godlygeek/tabular.git',
     require  => Package['vim-enhanced'],
   }
 
@@ -64,7 +64,7 @@ class puppetdev::vim_modules (
   vcsrepo {"/home/${user}/.vim/bundle/vim-puppet":
     ensure   => 'present',
     provider => 'git',
-    source   => 'git://github.com/rodjek/vim-puppet.git',
+    source   => 'https://github.com/rodjek/vim-puppet.git',
     require  => Package['vim-enhanced'],
   }
 
