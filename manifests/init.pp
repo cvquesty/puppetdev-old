@@ -4,7 +4,6 @@
 #
 # === Parameters
 #
-# Document parameters here.
 #
 # [*sample_parameter*]
 #   Explanation of what this parameter affects and what it defaults to.
