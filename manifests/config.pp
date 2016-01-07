@@ -6,7 +6,7 @@ class puppetdev::config (
 ){
 
   # Create User's .vim infrastructure and get pathogen
-  # and create the autoload directory
+  # and create the autoload directory foo
   vcsrepo {"/home/${user}/.vim/":
     ensure   => 'present',
     provider => 'git',
