@@ -1,9 +1,9 @@
 # Main configuration manifest for vim setup
 #
-class puppetdev::config (
-  $user  = $puppetdev::params::user,
-  $group = $puppetdev::params::group,
-){
+class puppetdev::config {
+
+  $user  = $::puppetdev::params::user
+  $group = $::puppetdev::params::group
 
   # Create User's .vim infrastructure and get pathogen
   # and create the autoload directory foo
