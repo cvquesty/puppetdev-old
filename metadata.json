@@ -1,6 +1,6 @@
 {
   "name": "cvquesty-puppetdev",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "author": "cvquesty",
   "license": "Apache-2.0",
   "summary": "Module to provide vim development environment for coders.",
