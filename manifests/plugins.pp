@@ -10,7 +10,7 @@ class puppetdev::plugins {
 
   # Frame up the file
   $dotvimrc = "${homedir}/.vimrc"
-  
+
   concat { $dotvimrc:
     owner => $user,
     group => $group,
