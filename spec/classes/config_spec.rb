@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-  describe 'puppetdev::config', :type => 'class' do
-    let(:title) { 'config' }
+  describe 'puppetdev::plugins', :type => 'class' do
+    let(:title) { 'plugins' }
     let(:params) { { :user => 'questy', :group => 'questy' } }
 
-    it { is_expected.to contain_class('puppetdev::config') }
+    it { is_expected.to contain_class('puppetdev::plugins') }
 
     it do
       is_expected.to contain_vcsrepo('/home/questy/.vim').with(
