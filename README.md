@@ -19,7 +19,7 @@ This module was built for a very narrow focus, but I realized it might be useful
 
 Its entire purpose is to configure a prebuilt "as I like it" vim editor environment for working on Puppet code.  Certainly, there are a number of Vim Puppet plugins out there, and I do use some of the more popular, but what this does is adds funcitonality to vim such that it becomes a powerful IDE.
 
-I would say the most effective use case would be to apply to a node for user X when the node is a centralized development host for use in a secure corporate environment.  Often times a company will not allow desktop virtualization, so using tools like Vagrant is completely out of the question.  However, the company will build a development environment for you in the data center.  
+I would say the most effective use case would be to apply to a node for user X when the node is a centralized development host for use in a secure corporate environment.  Often times a company will not allow desktop virtualization, so using tools like Vagrant is completely out of the question.  However, the company will build a development environment for you in the data center.
 
 When this scenario occurs, PuppetDev is there to give you a large amount of functionality within Vim for working with Puppet code.
 

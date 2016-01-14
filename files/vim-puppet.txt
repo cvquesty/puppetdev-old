@@ -1,0 +1,2 @@
+" These are the options for vim-puppet
+
