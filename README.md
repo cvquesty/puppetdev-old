@@ -1,5 +1,5 @@
 # puppetdev
-![](https://travis-ci.org/cvquesty/puppetdev.svg?branch=development)
+![](https://travis-ci.org/cvquesty/puppetdev.svg?branch=testing)
 #### Table of Contents
 
 1. [Overview](#overview)
