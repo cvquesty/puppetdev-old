@@ -23,7 +23,7 @@ class puppetdev::params {
     'vim-indent-guides' => 'https://github.com/nathanaelkane/vim-indent-guides.git',
     'vim-puppet' => 'https://github.com/rodjek/vim-puppet.git',
     'vim-trailing-whitespace' => 'https://github.com/bronson/vim-trailing-whitespace.git',
-    'rainbow_parenthesis' => 'https://github.com/kien/rainbow_parentheses.vim'
+    'rainbow_parenthesis' => 'https://github.com/kien/rainbow_parentheses.vim',
   }
 
 }
