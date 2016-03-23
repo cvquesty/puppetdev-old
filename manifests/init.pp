@@ -14,8 +14,8 @@ class puppetdev (
   $homedir = $::puppetdev::params::homedir,
 ) inherits puppetdev::params {
 
-  include puppetdev::prep
-  include puppetdev::plugins
-  include puppetdev::post
+  include ::puppetdev::prep
+  include ::puppetdev::plugins
+  include ::puppetdev::post
 
 }
