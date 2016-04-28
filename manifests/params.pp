@@ -18,7 +18,6 @@ class puppetdev::params {
     'syntastic' => 'https://github.com/scrooloose/syntastic.git',
     'tabular' => 'https://github.com/godlygeek/tabular.git',
     'vim-airline' => 'https://github.com/bling/vim-airline.git',
-    'vim-airline-themes' => 'https://github.com/vim-airline/vim-airline-themes  .git',
     'vim-fugitive' => 'https://github.com/tpope/vim-fugitive.git',
     'vim-gitgutter' => 'https://github.com/airblade/vim-gitgutter.git',
     'vim-indent-guides' => 'https://github.com/nathanaelkane/vim-indent-guides.git',
