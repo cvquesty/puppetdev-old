@@ -39,3 +39,4 @@ matrix:
 
 notifications:
   email: questy@gmail.com
+  slack: cvquesty:tdFwWHJPG7BtKLsgviyCMvyk
