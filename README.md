@@ -1,4 +1,3 @@
-
 # puppetdev
 ![](https://travis-ci.org/cvquesty/puppetdev.svg?branch=production)
 #### Table of Contents
