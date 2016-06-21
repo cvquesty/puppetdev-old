@@ -66,3 +66,4 @@ If you would like to contribute, you are more than welcome to the party.  Simply
 ## Release Notes/Contributors/Etc
 
 Changes in underlying Vim plugins are precipitating new builds.  This is one of those builds to accommodate vim-airline extracting their themes out into a separate module.
+
